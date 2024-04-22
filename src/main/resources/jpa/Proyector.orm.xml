@@ -5,7 +5,7 @@
                                      https://jakarta.ee/xml/ns/persistence/orm/orm_3_0.xsd"
                  version="3.0">
     <entity class="es.mde.externas.Proyector" access="FIELD">
-    <table name="PROYECTORES" />
+    <table name="PROYECTORES_FISHER" />
     <attributes>
       <id name="id">
         <generated-value strategy="IDENTITY"/>
