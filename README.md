@@ -1,5 +1,5 @@
 # **EXAMEN DE SPRING DIM XLVI ABR24**
-Empleo Nombre y apellidos: _General CGET/GC D. XXX XXX XXX_   
+Empleo Nombre y apellidos: _Capitán Ignacio Ovidio Muñoz Nicolás_   
 
 Fecha: _22 de abril de 2024_
 <hr>
