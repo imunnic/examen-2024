@@ -25,7 +25,7 @@ import jakarta.persistence.EntityManagerFactory;
 @Configuration
 @PropertySource({"classpath:configuracion/rest.properties", "classpath:configuracion/jackson.properties",
     "classpath:configuracion/gestionDDBB.properties"
- , "classpath:configuracion/secret.properties"
+// , "classpath:configuracion/secret.properties"
 })
 @EnableTransactionManagement
 @EnableJpaRepositories("${misRepositorios}") // leer valor de propiedades? pero solo para las
