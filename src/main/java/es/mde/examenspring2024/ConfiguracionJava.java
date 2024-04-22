@@ -15,14 +15,17 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import es.mde.entidades.Asignatura;
+import es.mde.entidades.Profesor;
 import es.mde.externas.Proyector;
+import es.mde.rest.MixIns;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 
 @Configuration
 @PropertySource({"classpath:configuracion/rest.properties", "classpath:configuracion/jackson.properties",
     "classpath:configuracion/gestionDDBB.properties"
-// , "classpath:config/passwordsBD.properties"
+// , "classpath:config/secret.properties"
 })
 @EnableTransactionManagement
 @EnableJpaRepositories("${misRepositorios}") // leer valor de propiedades? pero solo para las
@@ -82,9 +85,8 @@ public class ConfiguracionJava {
   public ObjectMapper getObjectMapper() {
 
     ObjectMapper mapper = new ObjectMapper();
-//    mapper.addMixIn(Jugador.class, MixIns.Jugadores.class);
-//    mapper.addMixIn(Camiseta.class, MixIns.Camisetas.class);
-    // mapper.addMixIn(Cuaderno.class, MixIns.Cuadernos.class);
+    mapper.addMixIn(Profesor.class, MixIns.Profesores.class);
+    mapper.addMixIn(Asignatura.class, MixIns.Asignaturas.class);
 
     return mapper;
   }
