@@ -8,8 +8,9 @@ import es.mde.entidades.Profesor;
 import java.util.List;
 
 
-@RepositoryRestResource(path = "profesores", itemResourceRel = "profesor", collectionResourceRel = "profesores")
-public interface ProfesorDAO extends JpaRepository<Profesor, Long>{
+@RepositoryRestResource(path = "profesores", itemResourceRel = "profesor",
+    collectionResourceRel = "profesores")
+public interface ProfesorDAO extends JpaRepository<Profesor, Long>, ProfesorDAOCustom {
   @RestResource(path = "por-area")
-  List<Profesor> findByAreaIgnoreCaseContaining(@RequestParam(name = "area")String texto);
+  List<Profesor> findByAreaIgnoreCaseContaining(@RequestParam(name = "area") String texto);
 }
