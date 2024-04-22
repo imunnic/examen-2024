@@ -1,65 +1,109 @@
 package es.mde.entidades;
 
 import java.time.Instant;
+import java.util.List;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
 
+@Entity
+@Table(name = "PROFESORES")
 public class Profesor {
+  @Id
+  @Column(name = "ID_PROFESOR")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
+  private String nombre;
+  private String correo;
+  @Column(name = "FECHA_INICIO")
+  private Instant fechaInicioContrato;
+  private transient boolean masculino;
+  private String area;
+  private boolean casado;
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "COLEGIO")
+  private Colegio colegio;
+  @OneToMany(mappedBy = "profesor")
+  private List<Asignatura> asignaturas;
 
-	private String nombre;
-	private String correo;
-	private Instant fechaInicioContrato;
-	private boolean masculino;
-	private String area;
-	private boolean casado;
+  public Profesor() {}
 
-	public Profesor() {
-	}
+  public Long getId() {
+    return id;
+  }
 
-	public String getNombre() {
-		return nombre;
-	}
+  public void setId(Long id) {
+    this.id = id;
+  }
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
+  public Colegio getColegio() {
+    return colegio;
+  }
 
-	public String getCorreo() {
-		return correo;
-	}
+  public void setColegio(Colegio colegio) {
+    this.colegio = colegio;
+  }
 
-	public void setCorreo(String correo) {
-		this.correo = correo;
-	}
+  public String getNombre() {
+    return nombre;
+  }
 
-	public Instant getFechaInicioContrato() {
-		return fechaInicioContrato;
-	}
+  public void setNombre(String nombre) {
+    this.nombre = nombre;
+  }
 
-	public void setFechaInicioContrato(Instant fechaInicioContrato) {
-		this.fechaInicioContrato = fechaInicioContrato;
-	}
+  public String getCorreo() {
+    return correo;
+  }
 
-	public boolean isMasculino() {
-		return masculino;
-	}
+  public void setCorreo(String correo) {
+    this.correo = correo;
+  }
 
-	public void setMasculino(boolean masculino) {
-		this.masculino = masculino;
-	}
+  public Instant getFechaInicioContrato() {
+    return fechaInicioContrato;
+  }
 
-	public String getArea() {
-		return area;
-	}
+  public void setFechaInicioContrato(Instant fechaInicioContrato) {
+    this.fechaInicioContrato = fechaInicioContrato;
+  }
 
-	public void setArea(String area) {
-		this.area = area;
-	}
+  public boolean isMasculino() {
+    return masculino;
+  }
 
-	public boolean isCasado() {
-		return casado;
-	}
+  public void setMasculino(boolean masculino) {
+    this.masculino = masculino;
+  }
 
-	public void setCasado(boolean casado) {
-		this.casado = casado;
-	}
+  public String getArea() {
+    return area;
+  }
 
+  public void setArea(String area) {
+    this.area = area;
+  }
+
+  public boolean isCasado() {
+    return casado;
+  }
+
+  public void setCasado(boolean casado) {
+    this.casado = casado;
+  }
+  
+  public List<Asignatura> getAsignaturas() {
+    return asignaturas;
+  }
+  
+  public void setAsignaturas(List<Asignatura> asignaturas) {
+    this.asignaturas = asignaturas;
+  }
 }

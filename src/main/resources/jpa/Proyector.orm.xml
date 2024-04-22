@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="https://jakarta.ee/xml/ns/persistence/orm"
+                 xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+                 xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence/orm
+                                     https://jakarta.ee/xml/ns/persistence/orm/orm_3_0.xsd"
+                 version="3.0">
+    <entity class="es.mde.externas.Proyector" access="FIELD">
+    <table name="PROYECTORES" />
+    <attributes>
+      <id name="id">
+        <generated-value strategy="IDENTITY"/>
+      </id>
+      <basic name="herzios" optional="false">
+		<column name="ERCIO"></column>
+      </basic>
+      <basic name="distanciaMaxima" optional="true">
+      	<column name="DISTANCIA_PROYECCION"></column>
+      </basic>
+      <basic name="size" optional="true"/>
+    </attributes>
+  </entity>
+</entity-mappings>
