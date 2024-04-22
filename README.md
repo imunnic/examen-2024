@@ -13,7 +13,7 @@ _El incumplimiento de este apartado supondrá  la calificación más baja (cero)
 1.	Cuando finalice el examen teórico avise al profesor, que acudirá para hacer la entrega de la parte práctica y recoger la parte teórica. **NO SE OLVIDE DE FIRMAR SU EXAMEN**.
 1.	Durante la realización del examen no se podrá abandonar el puesto donde está su equipo; el abandono del puesto supondrá la finalización del examen y se tendrá en cuenta para su corrección el código generado hasta el momento de abandonar su puesto.
 1.	Hay 40 puntos en juego. El aprobado se consigue con 20 puntos. Antes de cada pregunta figura su valoración.
-1. El tiempo para realizar el examen es de 180 minutos y el inicio del mismo se pondrá en el canal de la asignatura https://dim.institutomilitar.com/grain/EWAs32eGHyBt7eZnkWFi7Z/channel/backend-spring.
+1. El tiempo para realizar el examen es de 120 minutos y el inicio del mismo se pondrá en el canal de la asignatura https://dim.institutomilitar.com/grain/EWAs32eGHyBt7eZnkWFi7Z/channel/backend-spring.
 
 ### **Fin de Normas Generales para la Prueba**
 
